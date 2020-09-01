@@ -1,0 +1,11 @@
+apiVersion: skaffold/v2beta6
+kind: Config
+metadata:
+  name: unity-go-project
+build:
+  artifacts:
+  - image: unity-go-app
+deploy:
+  kubectl:
+    manifests:
+    - k8s-pod.yml
